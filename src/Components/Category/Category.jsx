@@ -20,7 +20,7 @@ import {
 import { imageUrl } from "../../redux/Api/baseApi";
 import CategoryUpdatemodal from "../UpdateAndEditModal/CategoryUpdatemodal";
 
-import CategoryAddModal from "../UpdateAndEditModal/CategoryAddmodal";
+import CategoryAddModal from "../UpdateAndEditModal/CategoryAddModal";
 
 import AddCreateSubcategoryMOdal from "../UpdateCreateSubCategoryModal/AddCreateSubcategoryMOdal";
 import { toast } from "react-toastify";
