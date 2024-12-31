@@ -111,7 +111,7 @@ const GuestHostInfo = ({ dataSource }) => {
         return (
           <div className="flex items-center justify-center gap-1">
             <button
-              className={`${isBlocked ? 'bg-red-600' : 'bg-green-600'} text-white p-2 rounded-md`}
+              className={`${isBlocked ? 'bg-green-600' : 'bg-red-600'} text-white p-2 rounded-md`}
               onClick={() => handleToggleBlock(record)}
             >
               <MdBlock size={20} />
