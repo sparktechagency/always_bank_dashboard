@@ -2,7 +2,7 @@
 import IncomeOverview from './Components/IncomeOverview/IncomeOverview'
 import { Link } from 'react-router-dom'
 import ProfileUpdateRequest from './Components/ProfileUpdateRequest/ProfileUpdateRequest'
-import './app.css'
+import './App.css'
 import img1 from './assets/images/user1.png'
 import img2 from './assets/images/user2.png'
 import img3 from './assets/images/driving.png'
