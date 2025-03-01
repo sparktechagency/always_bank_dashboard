@@ -5,7 +5,7 @@ import { useGetAllAdminQuery } from "../redux/Api/adminApi";
 
 const ProtectedRout = ({ children }) => {
   const location = useLocation();
-  const accessToken = localStorage.getItem("accessToken"); // Check accessToken from storage
+  const accessToken = localStorage.getItem("accessToken"); 
 
   if (!accessToken) {
     return <Navigate to={"/auth/login"} state={{ from: location }} />;
