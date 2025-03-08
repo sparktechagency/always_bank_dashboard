@@ -27,7 +27,7 @@ const Profile = () => {
     useChangePasswordMutation();
 
   const { data: adminData, isLoading: adminLoading } = useGetAllAdminQuery();
-  console.log(adminData?.data )
+  console.log(adminData )
 
   const handlePageChange = (tab) => {
     setTab(tab);

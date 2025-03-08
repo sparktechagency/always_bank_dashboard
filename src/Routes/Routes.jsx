@@ -18,12 +18,13 @@ import Category from "../Components/Category/Category";
 import DjManagement from "../Pages/DjManagement/DjManagement";
 import BarTender from "../Pages/BarTender/BarTender";
 import BottleGirl from "../Pages/BottleGirl/BottleGirl";
-import ProtectedRout from "../protectedRout/ProtectedRout";
+import ProtectedRoute from "../protectedRoute/ProtectedRoute";
+
 
 export const router = createBrowserRouter([
     {
         path: '/',
-        element:<ProtectedRout><MainLayout /></ProtectedRout>,
+        element:<ProtectedRoute><MainLayout /></ProtectedRoute>,
         children: [
             {
                 path: '/',

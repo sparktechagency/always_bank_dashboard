@@ -9,9 +9,12 @@ import { Navigate, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import img from '../../assets/images/logo.png'
 import { RiMovie2Line } from 'react-icons/ri'
 import { CiLogout } from 'react-icons/ci'
+import { logout } from '../../redux/features/auth/authSlice'
+import { useDispatch } from 'react-redux'
 const Sidebar = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const navigate = useNavigate()
+  const dispatch = useDispatch();
   const contentRefs = useRef([]);
   const { pathname } = useLocation();
 
@@ -99,14 +102,10 @@ const Sidebar = () => {
     },
     
   ]
-
   const handleLogOut = () => {
-    localStorage.removeItem('accessToken')
-    localStorage.removeItem('refreshToken')
-    localStorage.removeItem('email')
-        navigate("/auth/login");
-  }
-
+    dispatch(logout());
+    navigate("/auth/login");
+  };
   const toggleAccordion = (index) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };

@@ -2,10 +2,13 @@ import { Button, Checkbox, Form, Input, Spin } from "antd";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useLoginAdminMutation } from "../../redux/Api/user";
+import { useDispatch } from "react-redux";
+import { setToken } from "../../redux/features/auth/authSlice";
 
 const Login = () => {
   const [loginAdmin] = useLoginAdminMutation();
   const [loading, setLoading] = useState(false);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const onFinish = (values) => {
@@ -13,15 +16,8 @@ const Login = () => {
     loginAdmin(values)
       .unwrap()
       .then((payload) => {
-        if (payload?.data?.auth?.role === "ADMIN") {
-          localStorage.setItem(
-            "accessToken",
-            JSON.stringify(payload?.data?.accessToken)
-          );
-          localStorage.setItem(
-            "refreshToken",
-            JSON.stringify(payload?.data?.refreshToken)
-          );
+        if (payload) {
+          dispatch(setToken(payload?.data?.accessToken))
 
           navigate("/");
         }
