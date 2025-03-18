@@ -2,7 +2,7 @@ import { baseApi } from "./baseApi";
 
 const settingApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
-     /** Setting APIs */
+     /** Setting API */
      getTermsConditions: builder.query({
         query: () => {
             return {
