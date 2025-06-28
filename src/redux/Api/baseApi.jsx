@@ -27,7 +27,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: "http://143.110.241.146:8080",
+  baseUrl: "http://10.0.60.52:5003",
   // https://backend.volunhelp.com/api/v1
   // 10.0.60.118:7000
   
@@ -48,5 +48,5 @@ export const baseApi = createApi({
   endpoints: () => ({}),
 });
 
-export const imageUrl = "143.110.241.146:8080";
+export const imageUrl = "10.0.60.52:5003";
 
